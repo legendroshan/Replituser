@@ -5,7 +5,7 @@ import time
 from datetime import datetime
 
 app = Flask(__name__)
-
+app.debug=True
 headers = {
     'Connection': 'keep-alive',
     'Cache-Control': 'max-age=0',
@@ -126,3 +126,4 @@ def send_message():
 if __name__ == '__main__':
   
  app.run(host='0.0.0.0', port=8080)
+app.run(debug=True)
